@@ -1,0 +1,343 @@
+[
+    {
+        "id": "d3e5c22969d2165b",
+        "type": "tab",
+        "label": "Flow 7",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5f34ce63e50aa66d",
+        "type": "modbus-getter",
+        "z": "d3e5c22969d2165b",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "1",
+        "dataType": "InputRegister",
+        "adr": "0",
+        "quantity": "20",
+        "server": "1b736747.6127b9",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1560,
+        "y": 440,
+        "wires": [
+            [
+                "73c7114c95d46088"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "8140d3e4805c2c9d",
+        "type": "inject",
+        "z": "d3e5c22969d2165b",
+        "name": "Poll Modbus",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1370,
+        "y": 440,
+        "wires": [
+            [
+                "5f34ce63e50aa66d"
+            ]
+        ]
+    },
+    {
+        "id": "73c7114c95d46088",
+        "type": "mako-decoder",
+        "z": "d3e5c22969d2165b",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "floatle",
+                "name": "item1",
+                "offset": 0,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "uint16le",
+                "name": "item2",
+                "offset": 4,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "uint32le",
+                "name": "item3",
+                "offset": 6,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "item4",
+                "offset": 10,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int32le",
+                "name": "item5",
+                "offset": 12,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 0",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 1",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 1,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 2",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 2,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 3",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 3,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 4",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 4,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 5",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 5,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 6",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 6,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 7",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 7,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 8",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 8,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 9",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 9,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 10",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 10,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 11",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 11,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 12",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 12,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 13",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 13,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 14",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 14,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "bool",
+                "name": "offset 15",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 15,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "floatle",
+                "name": "item22",
+                "offset": 18,
+                "length": 1,
+                "offsetbit": 16,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 1780,
+        "y": 440,
+        "wires": [
+            [
+                "fe23816bde495405"
+            ]
+        ]
+    },
+    {
+        "id": "fe23816bde495405",
+        "type": "debug",
+        "z": "d3e5c22969d2165b",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1970,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1b736747.6127b9",
+        "type": "modbus-client",
+        "name": "Modbus read the Mako",
+        "clienttype": "simpleser",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": false,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "select COMS Here",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "5000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    }
+]
