@@ -1,0 +1,577 @@
+{
+  "Config": {
+    "Build": {
+      "Board": "esp32:esp32:esp32:EraseFlash=all,UploadSpeed=921600"
+    }
+  },
+  "Version": "2",
+  "Product": "V-Net Programmer",
+  "Content": "OpenWire Diagram",
+  "Units": [
+    {
+      "Name": "__OpenWireRootUnit__",
+      "*": [
+        {
+          "X": 256,
+          "Name": "Mako",
+          "Instance": {
+            "Serial": {
+              "*": [
+                {
+                  "InputPin": {
+                    "SourcePins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.ModbusServerSerialProtocol1.OutputPin"
+                      }
+                    ]
+                  },
+                  "OutputPin": {
+                    "SinkPins": [
+                      {
+                        "ID": "__OpenWireRootUnit__.ModbusServerSerialProtocol1.InputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoESP32MakoBoardSeria0"
+                },
+                {
+                  "+": "TArduinoESP32MakoBoardSerial"
+                },
+                {
+                  "+": "TArduinoESP32MakoBoardSeria2"
+                }
+              ]
+            },
+            "Analog": {
+              "*": [
+                {
+                  "+": "TArduinoESP32MakoBoardDirectAnalogChannel_1"
+                },
+                {
+                  "+": "TArduinoESP32MakoBoardDirectAnalogChannel_2"
+                },
+                {
+                  "+": "TArduinoESP32MakoBoardADS1115AnalogChannel"
+                },
+                {
+                  "+": "TArduinoESP32MakoBoardADS1115AnalogChannel"
+                },
+                {
+                  "+": "TArduinoESP32MakoBoardADS1115AnalogChannel"
+                },
+                {
+                  "+": "TArduinoESP32MakoBoardADS1115AnalogChannel"
+                }
+              ]
+            },
+            "+": "TVNetBoard",
+            "LoRa": {
+              "Encryption": {
+                "Key": ""
+              }
+            },
+            "WiFi": {
+              "AccessPoint": {
+                "SSID": "",
+                "Password": ""
+              },
+              "HostName": ""
+            },
+            "I2CChannels": {
+              "*": [
+                {
+                  "+": "TArduinoBasicI2C"
+                },
+                {
+                  "+": "TArduinoESP32MakoBoardI2C_2"
+                }
+              ]
+            },
+            "Digital": {
+              "Inputs": {
+                "*": [
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalInputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalInputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalInputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalInputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalInputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalInputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalInputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalInputChannel"
+                  }
+                ]
+              },
+              "Outputs": {
+                "*": [
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalOutputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalOutputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalOutputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalOutputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalOutputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalOutputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalOutputChannel"
+                  },
+                  {
+                    "+": "TArduinoESP32MakoBoardDigitalOutputChannel"
+                  }
+                ]
+              }
+            },
+            "SPIChannels": {
+              "*": [
+                {
+                  "+": "TArduinoESP32MakoBoardSPI"
+                }
+              ]
+            }
+          },
+          "Type": "Component",
+          "Y": 352
+        },
+        {
+          "X": 1136,
+          "Name": "ModbusDevice1",
+          "Instance": {
+            "Tables": {
+              "*": [
+                {
+                  "Registers": {
+                    "*": [
+                      {
+                        "Name": "32 bit Float1",
+                        "InputPin": {
+                          "SourcePin": {
+                            "ID": "__OpenWireRootUnit__.analog_value_60.OutputPin"
+                          }
+                        },
+                        "+": "TArduinoModbusDeviceInputRegister32BitFloat"
+                      },
+                      {
+                        "Name": "16 bit Unsigned1",
+                        "InputPin": {
+                          "SourcePin": {
+                            "ID": "__OpenWireRootUnit__.unsigned_value_300.OutputPin"
+                          }
+                        },
+                        "+": "TArduinoModbusDeviceInputRegister16BitUnsigned"
+                      },
+                      {
+                        "Name": "32 bit Unsigned1",
+                        "InputPin": {
+                          "SourcePin": {
+                            "ID": "__OpenWireRootUnit__.Value_123456789.OutputPin"
+                          }
+                        },
+                        "+": "TArduinoModbusDeviceInputRegister32BitUnsigned"
+                      },
+                      {
+                        "Name": "16 bit Integer1",
+                        "InputPin": {
+                          "SourcePin": {
+                            "ID": "__OpenWireRootUnit__.value_1000.OutputPin"
+                          }
+                        },
+                        "+": "TArduinoModbusDeviceInputRegister16BitInteger"
+                      },
+                      {
+                        "Name": "32 bit Integer1",
+                        "InputPin": {
+                          "SourcePin": {
+                            "ID": "__OpenWireRootUnit__.value_1234567.OutputPin"
+                          }
+                        },
+                        "+": "TArduinoModbusDeviceInputRegister32BitInteger"
+                      },
+                      {
+                        "Name": "16 bit Unsigned3",
+                        "InputPin": {
+                          "SourcePin": {
+                            "ID": "__OpenWireRootUnit__.DigitalsToUnsigned1.OutputPin"
+                          }
+                        },
+                        "+": "TArduinoModbusDeviceInputRegister16BitUnsigned"
+                      },
+                      {
+                        "Name": "32 bit Float2",
+                        "InputPin": {
+                          "SourcePin": {
+                            "ID": "__OpenWireRootUnit__.analog_value_60.OutputPin"
+                          }
+                        },
+                        "+": "TArduinoModbusDeviceInputRegister32BitFloat"
+                      }
+                    ]
+                  },
+                  "Name": "Input Registers1",
+                  "+": "TArduinoModbusDeviceTableInputRegisters"
+                }
+              ]
+            },
+            "ModbusInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ModbusServerSerialProtocol1.ModbusOutputPin"
+                }
+              ]
+            },
+            "+": "TArduinoModbusDevice"
+          },
+          "Type": "Component",
+          "Y": 272
+        },
+        {
+          "X": 256,
+          "Name": "ModbusServerSerialProtocol1",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Mako.Serial.Monitor (9600).InputPin",
+                  "ID": "__OpenWireRootUnit__.Mako.Serial._Item0.InputPin"
+                }
+              ]
+            },
+            "InputPin": {
+              "SourcePin": {
+                "Name": "__OpenWireRootUnit__.Mako.Serial.Monitor (9600).OutputPin",
+                "ID": "__OpenWireRootUnit__.Mako.Serial._Item0.OutputPin"
+              }
+            },
+            "+": "TArduinoModbusServerSerialProtocol",
+            "ModbusOutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ModbusDevice1.ModbusInputPin"
+                }
+              ]
+            }
+          },
+          "Type": "Component",
+          "Y": 256
+        },
+        {
+          "X": 816,
+          "Name": "analog_value_60",
+          "Instance": {
+            "ClockInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ClockGenerator1.OutputPin"
+                }
+              ]
+            },
+            "Min": 60,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.ModbusDevice1.Tables.Input Registers.Registers.32 bit Float.InputPin",
+                  "ID": "__OpenWireRootUnit__.ModbusDevice1.Tables._Item0.Registers._Item0.InputPin"
+                },
+                {
+                  "Name": "__OpenWireRootUnit__.ModbusDevice1.Tables.Input Registers.Registers.32 bit Float.InputPin",
+                  "ID": "__OpenWireRootUnit__.ModbusDevice1.Tables._Item0.Registers._Item6.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoRandomAnalogGenerator",
+            "Max": 60
+          },
+          "Type": "Component",
+          "Y": 336
+        },
+        {
+          "X": 624,
+          "Name": "ClockGenerator1",
+          "Instance": {
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.analog_value_60.ClockInputPin"
+                },
+                {
+                  "ID": "__OpenWireRootUnit__.unsigned_value_300.ClockInputPin"
+                },
+                {
+                  "ID": "__OpenWireRootUnit__.DigitalValue2.ClockInputPin"
+                },
+                {
+                  "ID": "__OpenWireRootUnit__.value_1000.ClockInputPin"
+                },
+                {
+                  "ID": "__OpenWireRootUnit__.value_1234567.ClockInputPin"
+                },
+                {
+                  "ID": "__OpenWireRootUnit__.Value_123456789.ClockInputPin"
+                }
+              ]
+            },
+            "+": "TArduinoClockGenerator"
+          },
+          "Type": "Component",
+          "Y": 432
+        },
+        {
+          "X": 816,
+          "Name": "unsigned_value_300",
+          "Instance": {
+            "ClockInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ClockGenerator1.OutputPin"
+                }
+              ]
+            },
+            "Min": 300,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.ModbusDevice1.Tables.Input Registers.Registers.16 bit Unsigned.InputPin",
+                  "ID": "__OpenWireRootUnit__.ModbusDevice1.Tables._Item0.Registers._Item1.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoRandomUnsignedGenerator",
+            "Max": 300
+          },
+          "Type": "Component",
+          "Y": 384
+        },
+        {
+          "X": 848,
+          "Name": "DigitalsToUnsigned1",
+          "Instance": {
+            "InputPins": {
+              "Count": 16,
+              "Form": "__OpenWireRootUnit__",
+              "Pins": [
+                {
+                  "Type": "ptSink",
+                  "SourcePin": {
+                    "ID": "__OpenWireRootUnit__.DigitalValue2.OutputPin"
+                  }
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink",
+                  "SourcePin": {
+                    "ID": "__OpenWireRootUnit__.DigitalValue2.OutputPin"
+                  }
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink",
+                  "SourcePin": {
+                    "ID": "__OpenWireRootUnit__.DigitalValue2.OutputPin"
+                  }
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink",
+                  "SourcePin": {
+                    "ID": "__OpenWireRootUnit__.DigitalValue2.OutputPin"
+                  }
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink"
+                },
+                {
+                  "Type": "ptSink",
+                  "SourcePin": {
+                    "ID": "__OpenWireRootUnit__.DigitalValue2.OutputPin"
+                  }
+                }
+              ]
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.ModbusDevice1.Tables.Input Registers.Registers.16 bit Unsigned.InputPin",
+                  "ID": "__OpenWireRootUnit__.ModbusDevice1.Tables._Item0.Registers._Item5.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoDigitalsToUnsigned"
+          },
+          "Type": "Component",
+          "Y": 640
+        },
+        {
+          "X": 624,
+          "Name": "DigitalValue2",
+          "Instance": {
+            "ClockInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ClockGenerator1.OutputPin"
+                }
+              ]
+            },
+            "Value": true,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.DigitalsToUnsigned1.InputPins.Pin [0]",
+                  "ID": "__OpenWireRootUnit__.DigitalsToUnsigned1.InputPins._Pin0"
+                },
+                {
+                  "Name": "__OpenWireRootUnit__.DigitalsToUnsigned1.InputPins.Pin [7]",
+                  "ID": "__OpenWireRootUnit__.DigitalsToUnsigned1.InputPins._Pin7"
+                },
+                {
+                  "Name": "__OpenWireRootUnit__.DigitalsToUnsigned1.InputPins.Pin [3]",
+                  "ID": "__OpenWireRootUnit__.DigitalsToUnsigned1.InputPins._Pin3"
+                },
+                {
+                  "Name": "__OpenWireRootUnit__.DigitalsToUnsigned1.InputPins.Pin [10]",
+                  "ID": "__OpenWireRootUnit__.DigitalsToUnsigned1.InputPins._Pin10"
+                },
+                {
+                  "Name": "__OpenWireRootUnit__.DigitalsToUnsigned1.InputPins.Pin [15]",
+                  "ID": "__OpenWireRootUnit__.DigitalsToUnsigned1.InputPins._Pin15"
+                }
+              ]
+            },
+            "+": "TArduinoBooleanValue"
+          },
+          "Type": "Component",
+          "Y": 784
+        },
+        {
+          "X": 816,
+          "Name": "value_1000",
+          "Instance": {
+            "ClockInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ClockGenerator1.OutputPin"
+                }
+              ]
+            },
+            "Min": 1000,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.ModbusDevice1.Tables.Input Registers.Registers.16 bit Integer.InputPin",
+                  "ID": "__OpenWireRootUnit__.ModbusDevice1.Tables._Item0.Registers._Item3.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoRandomIntegerGenerator"
+          },
+          "Type": "Component",
+          "Y": 480
+        },
+        {
+          "X": 816,
+          "Name": "value_1234567",
+          "Instance": {
+            "ClockInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ClockGenerator1.OutputPin"
+                }
+              ]
+            },
+            "Min": -1234567,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.ModbusDevice1.Tables.Input Registers.Registers.32 bit Integer.InputPin",
+                  "ID": "__OpenWireRootUnit__.ModbusDevice1.Tables._Item0.Registers._Item4.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoRandomIntegerGenerator",
+            "Max": -1234567
+          },
+          "Type": "Component",
+          "Y": 528
+        },
+        {
+          "X": 816,
+          "Name": "Value_123456789",
+          "Instance": {
+            "ClockInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.ClockGenerator1.OutputPin"
+                }
+              ]
+            },
+            "Value": 123456789,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.ModbusDevice1.Tables.Input Registers.Registers.32 bit Unsigned.InputPin",
+                  "ID": "__OpenWireRootUnit__.ModbusDevice1.Tables._Item0.Registers._Item2.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoUnsignedValue"
+          },
+          "Type": "Component",
+          "Y": 432
+        }
+      ],
+      "Type": "Diagram",
+      "Selection": [
+        "ModbusDevice1"
+      ]
+    }
+  ]
+}
